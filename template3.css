@@ -1,0 +1,95 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas:
+  "header header header"
+  "sidebar contain sidebar2"
+  "sidebar contain sidebar2"
+  "footer footer footer";
+  gap: 10px;
+}
+
+
+@media only screen and (max-width: 768px){
+  .container{
+    display: grid;
+    height: 100vh;
+    width: 80vw;
+    justify-content: center;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas:
+    "header header header"
+    "sidebar sidebar sidebar "
+    "contain contain contain "
+    "contain contain contain "
+    "contain contain contain "
+    "sidebar2 sidebar2 sidebar2"
+    "footer footer footer";
+    gap: 10px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1224px)  {
+  .container{
+    display: grid;
+    height: 100vh;
+    width: 80vw;
+    justify-content: center;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas:
+    "header header header"
+    "sidebar contain contain "
+    "sidebar2 sidebar2 sidebar2"
+    "footer footer footer";
+    gap: 10px;
+  }
+}
+
+.grid-item{
+  border: 1px solid grey;
+  background-color: white;
+  padding-left: 5px;
+  padding-top: 10px;
+}
+
+.box1{
+  background-color:grey;
+  border-radius: 10px;
+  grid-area: header;
+  color: white;
+  margin-top: 10px;
+}
+.box2{
+  background-color: rgb(73, 73, 73);
+  border-radius: 10px;
+  grid-area: sidebar;
+  color: white;
+}
+.box3{
+  background-color:rgb(73, 73, 73);
+  border-radius: 10px;
+  grid-area: contain;
+  color: white;
+}
+.box4{
+  background-color: rgb(162, 162, 164);
+  border-radius: 10px;
+  grid-area: sidebar2;
+  color: rgb(84, 83, 83);
+}
+.box5{
+  background-color: grey;
+  border-radius: 10px;
+  grid-area: footer;
+  color: white;
+  margin-bottom: 10px;
+}
